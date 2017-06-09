@@ -1,0 +1,264 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 400 14px/24px Roboto, "Open Sans", "HelveticaNeue-Light",
+       "Helvetica Neue Light", "Lucida Grande", Sans-Serif;
+  background-color: #364040;
+}
+
+body .header {
+  width: 100%;
+  height: 60px;
+  background: pink;
+}
+
+body .holygrail-body {
+  flex: 1 0 auto;
+  display: flex;
+  background-color: #364040;
+}
+
+body .holygrail-body .content {
+  flex: 1 0 auto;
+  background: #364040;
+}
+
+body .holygrail-body .nav {
+  width: 175px;
+  list-style: none;
+  text-align: left;
+  order: -1;
+  background-color: #c1e5e5;
+  margin: 0;
+}
+
+body .footer {
+  width: 100%;
+  height: 60px;
+  background: cyan;
+}
+
+@media (max-width: 700px) {
+  body .holygrail-body {
+    flex-direction: column;
+  }
+  body .holygrail-body .nav {
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2 {
+  font-family: 'Goudy Bookletter 1911', serif;
+  margin-top: 7px;
+  margin-bottom: 8px;
+  text-align: center;
+  color: gold;
+}
+
+header {
+  color: white;
+  background-color: #6b7f7f;
+  border: 1px solid gray;
+}
+
+header p {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+header p img {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 3px;
+  margin-bottom: 0px;
+  vertical-align: top;
+}
+
+ul.nav {
+  margin: 115px;
+}
+
+p.js-category {
+  text-align: left;
+  font-size: 16px;
+  color: blue;
+  margin-left: 8px;
+  margin-bottom: 3px;
+}
+
+.js-periodical:hover {
+  background-color: #6b7f7f;
+  color: white;
+  cursor: pointer;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 2px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.js-periodical {
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: background-color 0.33s, color 0.33s, font-size 0.33s,
+       margin-left 0.33s, margin-right 0.33s, padding-left 0.33s;
+}
+
+.title-row {}
+
+.button-box {
+  float: right;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 5vh;
+  border: 1px solid gray;
+  border-radius: 6px;
+  background-color: #c1e5e5;
+  /* was #d6ffff */
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.expand-button {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 5px;
+  transition: border-bottom ease;
+}
+
+.expand-button:hover {
+  cursor: pointer;
+  /* background-color: #ffefe5; */
+  /* width: 25px; */
+  /* height: 25px; */
+  padding-bottom: 0;
+  border-bottom: 5px solid red;
+}
+
+.tab-button {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 5px;
+  transition: border-bottom ease;
+}
+
+.tab-button:hover {
+  cursor: pointer;
+  padding-bottom: 0;
+  border-bottom: 5px solid red;
+  /* background-color: #ffefe5; */
+  /* width: 25px; */
+  /* height: 25px; */
+}
+
+.delete-button {
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 8px;
+  padding-bottom: 5px;
+  transition: border-bottom ease;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  border-bottom: 5px solid red;
+  padding-bottom: 0;
+  /* background-color: #ffefe5; */
+  /* width: 25px; */
+  /* height: 25px; */
+}
+
+span.article-source {
+  display: inline;
+  text-align: left;
+  color: black;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  margin: 0;
+  font-size: 13px;
+}
+
+p.article-title {
+  color: blue;
+  text-align: left;
+  margin: 5px;
+  font-size: 16px;
+  clear: right;
+}
+
+.detail-URLImage {
+  width: 280px;
+  height: 220px;
+  border: 1px solid black;
+  margin-left: 5px;
+  margin-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  float: left;
+}
+
+.detail-desc {
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 25px;
+  color: black;
+  line-height: 120%;
+  max-width: 800px;
+  /* set to handle long descriptions */
+}
+
+.detail-author {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  margin-right: 25px;
+  color: black;
+}
+
+footer {
+  color: white;
+  background-color: #6b7f7f;
+  text-align: center;
+}
+
+footer p {
+  -webkit-appearance: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: gold;
+}
