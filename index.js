@@ -90,7 +90,7 @@ function returnSources(data) {
     }
 
     //  Change "Science-and-Nature" category name to
-    //  "Science/Nature"
+    //  "Science/Nature", according to user input
 
     if (data.sources[i].category == "science-and-nature") {
       data.sources[i].category = "science/nature";
@@ -137,7 +137,7 @@ function returnSources(data) {
       catHeader = sources[i].category;
     }
     text = text + '<p class="js-periodical" data-source-id="' + sources[i].sourceId +
-         '" id="' + sources[i].sourceId + '">' + sources[i].name + '</p>';
+      '" id="' + sources[i].sourceId + '">' + sources[i].name + '</p>';
   }
   $('.nav').html(text);
 }
@@ -194,30 +194,15 @@ $(function() {
   'use strict';
 
   //  Get the sources/periodicals and display them
-  //  in a vertical menu
+  //  in the nav menu
 
   var parms = {
     language: "en" // English language sources only
   };
   $.getJSON(SOURCES_URL, parms, returnSources);
 
-  //  event handler for clicking on a periodical in the
-  //  vertical menu
-
-  $("#source-container").on('click', '.js-periodical', function(event) {
-    event.preventDefault();
-    var sourceId = $(this).data('source-id');
-    var x = locationInSources(sourceId);
-    currentPeriodicalTitle = sources[x].name;
-    parms = {
-      source: sources[x].sourceId,
-      apiKey: API_KEY
-    };
-    $.getJSON(ARTICLES_URL, parms, returnArticles);
-  });
-
   //  Register the event handler for clicking on a periodical in the
-  //  vertical menu. If a periodical is clicked, obtain the articles
+  //  nav menu. If a periodical is clicked, obtain the articles
 
   $(".nav").on('click', '.js-periodical', function(event) {
     event.preventDefault();
@@ -256,7 +241,6 @@ $(function() {
     event.preventDefault();
     var x = $(this)["0"].parentNode.attributes[1].value;
     window.open(articles[x].url, '_blank');
-    // renderArticles();
   });
 
 })

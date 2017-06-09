@@ -2,89 +2,39 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>My Daily News</title>
+  <title>News Reader</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="main.css">
-  
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
 
 </head>
 
 <body>
+
   <header>
-    <h1>My Daily News</h1>
+    <h1>News Reader</h1>
     <p>Select some periodicals and review the articles.
-        <img src="assets/expand-4.svg"> Expand/collapse details,   
-        <img src="assets/opentab.svg"> open in browser,   
+        <img src="assets/expand-4.svg"> Expand/collapse details,
+        <img src="assets/opentab.svg"> open in browser,
         <img src="assets/trashcan.svg"> delete article.
-    </p> 
+    </p>
   </header>
 
   <div class="holygrail-body">
     <div class="content">
+    </div>
 
-      <!-- <article class="article-container">
-
-        <div class="title-row">
-          <span class="article-source">The Washington Post - 1 day, 4 hours ago</span>
-          <div class="button-box">
-            <div class="expand-button"><img src="assets/expand-4.svg" title="Expand/collapse details"></div>
-            <div class="tab-button"><img src="assets/opentab.svg" title="Open browser tab"></div>
-            <div class="delete-button"><img src="assets/trashcan.svg" title="Delete article"></div>
-          </div>  
-        <p class="article-title">Nunes-led House Intelligence Committee asked for ‘unmaskings’ of Americans</p>
-        <div class="detail">
-          <img class="detail-URLImage" src="https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/03/28/Others/Images/2017-03-28/nunes_6.jpg">
-          <p class="detail-author">By Adam Entous, Ellen Nakashima, Adam Entous, Ellen Nakashima</p>
-          <p class="detail-desc">House panel made more requests than Susan E. Rice between June 2016 and January 2017.</p>
-        </div>
-          
-      </article> -->
-
-      <!-- <article class="article-container">
-
-        <div class="title-row">
-          <span class="article-source">The Washington Post - 2 hours ago</span>
-          <div class="button-box">
-            <div class="expand-button"><img src="assets/expand-4.svg" title="Expand/collapse details"></div>
-            <div class="tab-button"><img src="assets/opentab.svg" title="Open browser tab"></div>
-            <div class="delete-button"><img src="assets/trashcan.svg" title="Delete article"></div>
-          </div>  
-        </div>  
-        <p class="article-title">Analysis | Is the big story ‘unmasking’ or Trump-Russia connections? Congress can’t decide.</p>
-        <div class="detail"> -->
-          <!-- <img class="detail-URLImage" src="https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2017/03/28/Others/Images/2017-03-28/nunes_6.jpg">
-          <p class="detail-author">By Adam Entous, Ellen Nakashima, Adam Entous, Ellen Nakashima</p>
-          <p class="detail-desc">House panel made more requests than Susan E. Rice between June 2016 and January 2017.</p> -->
-        <!-- </div>
-          
-      </article> -->
-
-    </div>  <!-- end of content -->
     <div class="nav">
-      <!-- <p class="js-category">BUSINESS</p>
-      <p class="js-periodical" data-source-id="business-insider-uk" id="business-insider-uk">Business Insider (UK)</p>
-      <p class="js-periodical" data-source-id="financial-times" id="financial-times">Financial Times</p>
-      <p class="js-periodical" data-source-id="the-economist" id="the-economist">The Economist</p>
-      <p class="js-periodical" data-source-id="the-wall-street-journal" id="the-wall-street-journal">The Wall Street Journal</p>
-      <p class="js-periodical" data-source-id="business-insider" id="business-insider">Business Insider</p>
-      <p class="js-periodical" data-source-id="cnbc" id="cnbc">CNBC</p>
-      <p class="js-periodical" data-source-id="bloomberg" id="bloomberg">Bloomberg</p>
-      <p class="js-periodical" data-source-id="fortune" id="fortune">Fortune</p>
-      <p class="js-category">ENTERTAINMENT</p>
-      <p class="js-periodical" data-source-id="buzzfeed" id="buzzfeed">Buzzfeed</p><p class="js-periodical" data-source-id="the-lad-bible" id="the-lad-bible">The Lad Bible</p><p class="js-periodical" data-source-id="entertainment-weekly" id="entertainment-weekly">Entertainment Weekly</p><p class="js-periodical" data-source-id="daily-mail" id="daily-mail">Daily Mail</p><p class="js-periodical" data-source-id="mashable" id="mashable">Mashable</p><p class="js-category">GAMING</p><p class="js-periodical" data-source-id="polygon" id="polygon">Polygon</p><p class="js-periodical" data-source-id="ign" id="ign">IGN</p><p class="js-category">GENERAL</p><p class="js-periodical" data-source-id="usa-today" id="usa-today">USA Today</p><p class="js-periodical" data-source-id="abc-news-au" id="abc-news-au">ABC News (AU)</p><p class="js-periodical" data-source-id="mirror" id="mirror">Mirror</p><p class="js-periodical" data-source-id="reddit-r-all" id="reddit-r-all">Reddit /r/all</p><p class="js-periodical" data-source-id="al-jazeera-english" id="al-jazeera-english">Al Jazeera English</p><p class="js-periodical" data-source-id="bbc-news" id="bbc-news">BBC News</p><p class="js-periodical" data-source-id="time" id="time">Time</p><p class="js-periodical" data-source-id="the-times-of-india" id="the-times-of-india">The Times of India</p><p class="js-periodical" data-source-id="the-guardian-uk" id="the-guardian-uk">The Guardian (UK)</p><p class="js-periodical" data-source-id="google-news" id="google-news">Google News</p><p class="js-periodical" data-source-id="reuters" id="reuters">Reuters</p><p class="js-periodical" data-source-id="cnn" id="cnn">CNN</p><p class="js-periodical" data-source-id="newsweek" id="newsweek">Newsweek</p><p class="js-periodical" data-source-id="the-guardian-au" id="the-guardian-au">The Guardian (AU)</p><p class="js-periodical" data-source-id="the-washington-post" id="the-washington-post">The Washington Post</p><p class="js-periodical" data-source-id="the-hindu" id="the-hindu">The Hindu</p><p class="js-periodical" data-source-id="the-huffington-post" id="the-huffington-post">The Huffington Post</p><p class="js-periodical" data-source-id="associated-press" id="associated-press">Associated Press</p><p class="js-periodical" data-source-id="new-york-magazine" id="new-york-magazine">New York Magazine</p><p class="js-periodical" data-source-id="the-telegraph" id="the-telegraph">The Telegraph</p><p class="js-periodical" data-source-id="metro" id="metro">Metro</p><p class="js-periodical" data-source-id="independent" id="independent">Independent</p><p class="js-periodical" data-source-id="the-new-york-times" id="the-new-york-times">The New York Times</p><p class="js-category">MUSIC</p><p class="js-periodical" data-source-id="mtv-news-uk" id="mtv-news-uk">MTV News (UK)</p><p class="js-periodical" data-source-id="mtv-news" id="mtv-news">MTV News</p><p class="js-category">POLITICS</p><p class="js-periodical" data-source-id="breitbart-news" id="breitbart-news">Breitbart News</p><p class="js-category">SCIENCE-AND-NATURE</p><p class="js-periodical" data-source-id="national-geographic" id="national-geographic">National Geographic</p><p class="js-periodical" data-source-id="new-scientist" id="new-scientist">New Scientist</p><p class="js-category">SPORT</p><p class="js-periodical" data-source-id="espn-cric-info" id="espn-cric-info">ESPN Cric Info</p><p class="js-periodical" data-source-id="fox-sports" id="fox-sports">Fox Sports</p><p class="js-periodical" data-source-id="four-four-two" id="four-four-two">FourFourTwo</p><p class="js-periodical" data-source-id="football-italia" id="football-italia">Football Italia</p><p class="js-periodical" data-source-id="nfl-news" id="nfl-news">NFL News</p><p class="js-periodical" data-source-id="bbc-sport" id="bbc-sport">BBC Sport</p><p class="js-periodical" data-source-id="espn" id="espn">ESPN</p><p class="js-periodical" data-source-id="talksport" id="talksport">TalkSport</p><p class="js-periodical" data-source-id="the-sport-bible" id="the-sport-bible">The Sport Bible</p><p class="js-category">TECHNOLOGY</p><p class="js-periodical" data-source-id="recode" id="recode">Recode</p><p class="js-periodical" data-source-id="techradar" id="techradar">TechRadar</p><p class="js-periodical" data-source-id="hacker-news" id="hacker-news">Hacker News</p><p class="js-periodical" data-source-id="engadget" id="engadget">Engadget</p><p class="js-periodical" data-source-id="ars-technica" id="ars-technica">Ars Technica</p><p class="js-periodical" data-source-id="the-verge" id="the-verge">The Verge</p><p class="js-periodical" data-source-id="the-next-web" id="the-next-web">The Next Web</p><p class="js-periodical" data-source-id="techcrunch" id="techcrunch">TechCrunch</p> -->
     </div>
   </div>
 
   <footer>
       <p>This app is happily powered by <a href="https://newsapi.org/">NewsAPI.org</a>.  The great icons on this page are available at <a href="http://www.flaticon.com">www.flaticon.com</a>.</p>
-      <p>
   </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="index.js"></script>
 
