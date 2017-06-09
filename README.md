@@ -10,3 +10,10 @@ summary form in the central area.
 * expand the summary to display details about the article
 * open the article in a browser tab
 * delete the article from the list
+
+*Screen Shots*
+
+![Periodical list -- select one or more](screenshots/periodicals.png)
+![Articles display after periodical is selected](screenshots/articles-selected.png)
+![Icons and their actions](screenshots/icon-legend.png)
+![Article expandend to show details](screenshots/articles-expanded.png)
