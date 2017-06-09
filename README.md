@@ -13,7 +13,7 @@ summary form in the central area.
 
 *Screen Shots*
 
-![Periodical list -- select one or more](screenshots/periodicals.png)
-![Articles display after periodical is selected](screenshots/articles-selected.png)
-![Icons and their actions](screenshots/icon-legend.png)
-![Article expandend to show details](screenshots/articles-expanded.png)
+Periodical list ![Periodical list](screenshots/periodicals.png)
+Articles displayed ![Articles displayed](screenshots/articles-selected.png)
+Icons and their actions ![Icons](screenshots/icon-legend.png)
+Article expanded to show details ![Article expanded](screenshots/articles-expanded.png)
