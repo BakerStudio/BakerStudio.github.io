@@ -10,20 +10,13 @@ var ARTICLE_STATUS_DELETED = 2;
 
 
 function locationInSources(id) {
+
+  // Return the index of the sources array for the
+  // periodical that has been selected
+
   for (var i = 0; i < sources.length; i++) {
     if (sources[i].sourceId == id) {
       return i;
-    }
-  }
-  return -1;
-}
-
-
-function locationInArticles(targetURL) {
-
-  for (var y = 0; y < articles.length; y++) {
-    if (articles[y].url == targetURL) {
-      return y;
     }
   }
   return -1;
@@ -114,8 +107,8 @@ function returnSources(data) {
     };
   }
 
-  // sort by category and then periodical
-  // name within category
+  // sort by category and then by periodical
+  // name within the category
 
   sources.sort(function(a, b) {
     if (a.category == b.category) {
