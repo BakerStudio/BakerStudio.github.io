@@ -52,6 +52,10 @@ body .footer {
   display: none;
 }
 
+.orange-background {
+  background-color: orange;
+}
+
 h1, h2 {
   font-family: 'Goudy Bookletter 1911', serif;
   margin-top: 7px;
@@ -129,13 +133,17 @@ p.js-category {
   min-height: 5vh;
   border: 1px solid gray;
   border-radius: 6px;
-  background-color: #c1e5e5;
-  /* was #d6ffff */
+  background-color: #c1e5e5;  /* was #d6ffff */
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 5px;
+  transition: background-color 0.33s;
+}
+
+.article-container:hover {
+  background-color: #d9d9d9; /* lightgray */
 }
 
 .expand-button {
@@ -151,9 +159,6 @@ p.js-category {
 
 .expand-button:hover {
   cursor: pointer;
-  /* background-color: #ffefe5; */
-  /* width: 25px; */
-  /* height: 25px; */
   padding-bottom: 0;
   border-bottom: 5px solid red;
 }
@@ -173,9 +178,6 @@ p.js-category {
   cursor: pointer;
   padding-bottom: 0;
   border-bottom: 5px solid red;
-  /* background-color: #ffefe5; */
-  /* width: 25px; */
-  /* height: 25px; */
 }
 
 .delete-button {
@@ -193,9 +195,6 @@ p.js-category {
   cursor: pointer;
   border-bottom: 5px solid red;
   padding-bottom: 0;
-  /* background-color: #ffefe5; */
-  /* width: 25px; */
-  /* height: 25px; */
 }
 
 span.article-source {
@@ -235,7 +234,6 @@ p.article-title {
   color: black;
   line-height: 120%;
   max-width: 800px;
-  /* set to handle long descriptions */
 }
 
 .detail-author {
