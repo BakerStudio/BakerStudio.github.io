@@ -9,20 +9,6 @@ var ARTICLE_STATUS_EXPANDED = 1;
 var ARTICLE_STATUS_DELETED = 2;
 
 
-function locationInSources(id) {
-
-  // Return the index of the sources array for the
-  // periodical that has been selected
-
-  for (var i = 0; i < sources.length; i++) {
-    if (sources[i].sourceId == id) {
-      return i;
-    }
-  }
-  return -1;
-}
-
-
 function dateSpan(pubDate) {
 
   if (pubDate == null) {
@@ -129,8 +115,7 @@ function returnSources(data) {
       text = text + '<p class="js-category">' + sources[i].category.toUpperCase() + '</p>';
       catHeader = sources[i].category;
     }
-    text = text + '<p class="js-periodical" data-source-id="' + sources[i].sourceId +
-      '" id="' + sources[i].sourceId + '">' + sources[i].name + '</p>';
+    text = text + '<p class="js-periodical" id="' + i + '">' + sources[i].name + '</p>';
   }
   $('.nav').html(text);
 }
@@ -199,8 +184,7 @@ $(function() {
 
   $(".nav").on('click', '.js-periodical', function(event) {
     event.preventDefault();
-    var sourceId = $(this).data('source-id');
-    var x = locationInSources(sourceId);
+    var x = $(this)['0'].id;
     currentPeriodicalTitle = sources[x].name;
     parms = {
       source: sources[x].sourceId,
