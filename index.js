@@ -7,12 +7,74 @@ var currentPeriodicalTitle = '';
 var ARTICLE_STATUS_COLLAPSED = 0;
 var ARTICLE_STATUS_EXPANDED = 1;
 var ARTICLE_STATUS_DELETED = 2;
+var logos = {
+      Bloomberg: "logos/Bloomberg.png",
+      'Business Insider': "logos/Business-insider.png",
+      'Business Insider (UK)': "logos/Business-insider.png",
+      Buzzfeed: "logos/buzzfeed-logo.jpg",
+      CNBC: "logos/cnbc_logo.gif",
+      'The Wall Street Journal': "logos/WSJ.png",
+      Fortune: "logos/fortune.gif",
+      'Financial Times': "logos/financial-times.png",
+      'The Economist': "logos/the-economist-logo.gif",
+      'Daily Mail': "logos/daily-mail.jpeg",
+      'Entertainment Weekly': "logos/entertainment-weekly.jpg",
+      'The Lad Bible': "logos/the-lad-bible.jpg",
+      Mashable: "logos/mashable-logo.png",
+      'The Washington Post': "logos/washington-post.png",
+      IGN: "logos/ign.png",
+      Polygon: "logos/polygon.jpg",
+      'ABC News (AU)': "logos/abc-news-au.jpg",
+      'Al Jazeera English': 'logos/aljazeera.jpg',
+      'Associated Press': 'logos/ap.gif',
+      'BBC News': 'logos/bbc_news.png',
+      CNN: "logos/CNN-Logo.jpg",
+      'Google News': "logos/google-news.png",
+      "Breitbart News": "logos/breitbart.jpg",
+      'The Guardian (AU)': "logos/guardian-au.png",
+      'The Guardian (UK)': "logos/guardian-uk.png",
+      'The Hindu': "logos/hindu.jpeg",
+      'The Huffington Post': "logos/huff-post.png",
+      Independent: "logos/indy.png",
+      'National Geographic': "logos/nat-geo2.jpg",
+      'New Scientist': "logos/new-sci.jpg",
+      'Metro': "logos/metro.png",
+      'Mirror': "logos/mirror.jpg",
+      'New York Magazine': "logos/nymag.png",
+      'The New York Times': "logos/nytimes.jpg",
+      'Newsweek': "logos/newsweek.png",
+      'Reddit /r/all': "logos/reddit.png",
+      Reuters: "logos/reuters.jpg",
+      'The Telegraph': "logos/telegraph.jpg",
+      Time: "logos/time-logo.png",
+      'The Times of India': "logos/times-india.png",
+      'USA Today': "logos/usa-today.jpg",
+      'MTV News': "logos/mtv-news-logo.png",
+      'MTV News (UK)': "logos/mtv-logo.png",
+      'BBC Sport': "logos/bbc-sport.jpg",
+      ESPN: "logos/espn.jpg",
+      'ESPN Cric Info': "logos/cric-info.jpg",
+      'Football Italia': "logos/football-italia.jpeg",
+      'FourFourTwo': "logos/fourfourtwo.png",
+      'Fox Sports': "logos/fox-sports.png",
+      'NFL News': "logos/nfl.jpg",
+      'The Sport Bible': "logos/sport-bible.png",
+      TalkSport: "logos/talksport.jpg",
+      'Ars Technica': "logos/ars.png",
+      Engadget: "logos/engadget.png",
+      'Hacker News': "logos/hacker.png",
+      'The Next Web': "logos/tnw.png",
+      Recode: "logos/recode.jpg",
+      TechCrunch: "logos/techcrunch.jpg",
+      TechRadar: "logos/techradar.jpg",
+      'The Verge': "logos/verge.png"
+}
 
 
 function dateSpan(pubDate) {
 
   if (pubDate == null) {
-    return "not provided";
+    return "published date not provided";
   }
 
   // Normalize publishedAt date and the system date in terms of millisecs
@@ -116,6 +178,7 @@ function returnSources(data) {
       catHeader = sources[i].category;
     }
     text = text + '<p class="js-periodical" id="' + i + '">' + sources[i].name + '</p>';
+    // console.log("name: " + sources[i].name);  //temp
   }
   $('.nav').html(text);
 }
@@ -124,11 +187,14 @@ function returnSources(data) {
 function renderArticles() {
   var i;
   var text = '';
+  var author;
+  var description;
 
   for (i = 0; i < articles.length; i++) {
     if (articles[i].status != ARTICLE_STATUS_DELETED) {
       text = text + '<article class="article-container"><div class="title-row" ' +
         'data-article-id="' + articles[i].url + '">' +
+        '<img src="' + logos[articles[i].sourceTitle] + '" class="logo">' +
         '<span class="article-source">' + articles[i].sourceTitle + ' - ' + dateSpan(articles[i].publishedAt) +
         '</span><div class="button-box" data-row-id="' + i + '">' +
         '<div class="expand-button"><img src="assets/expand-4.svg" title="Expand/collapse details"></div>' +
@@ -143,9 +209,23 @@ function renderArticles() {
       if (articles[i].status == ARTICLE_STATUS_EXPANDED) {
         text = text + '">';
       }
+
+      //  Check if author and description are provided. If not, handle the null case.
+
+      if (articles[i].author == null) {
+        author = "Author not provided"
+      } else {
+        author = "By " + articles[i].author;
+      }
+      if (articles[i].description == null) {
+        description = "Description not provided"
+      } else {
+        description = articles[i].description;
+      }
+
       text = text + '<img class="detail-URLImage" src="' + articles[i].urlToImage + '">' +
-        '<p class="detail-author">By ' + articles[i].author + '</p>' +
-        '<p class="detail-desc">' + articles[i].description + '</p></div></article>';
+        '<p class="detail-author">' + author + '</p>' +
+        '<p class="detail-desc">' + description + '</p></div></article>';
     }
   }
 

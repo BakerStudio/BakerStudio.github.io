@@ -8,6 +8,7 @@ body {
 }
 
 body .header {
+  /*flex: 1 0 auto;*/
   width: 100%;
   height: 60px;
   background: pink;
@@ -22,6 +23,7 @@ body .holygrail-body {
 body .holygrail-body .content {
   flex: 1 0 auto;
   background: #364040;
+  margin-top: 2px;
 }
 
 body .holygrail-body .nav {
@@ -31,6 +33,8 @@ body .holygrail-body .nav {
   order: -1;
   background-color: #c1e5e5;
   margin: 0;
+  margin-top: 5px;
+  overflow-y: auto;
 }
 
 body .footer {
@@ -39,7 +43,7 @@ body .footer {
   background: cyan;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   body .holygrail-body {
     flex-direction: column;
   }
@@ -52,28 +56,42 @@ body .footer {
   display: none;
 }
 
-.orange-background {
-  background-color: orange;
+.logo {
+  margin-top: 2px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 6px
 }
 
 h1, h2 {
   font-family: 'Goudy Bookletter 1911', serif;
-  margin-top: 7px;
-  margin-bottom: 8px;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  margin-left: 10px;
   text-align: center;
+  vertical-align: middle;
   color: gold;
+  float: left;
 }
 
 header {
+  /*position: fixed;*/
+  display: flex;
+  flex-direction: column;
+  /*min-height: 5vh;*/
   color: white;
   background-color: #6b7f7f;
   border: 1px solid gray;
+  width: 100%;
+  /*height: 68px;*/
 }
 
 header p {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 3px;
+  float: left;
+  /*margin-top: 3px;*/
+  /*margin-bottom: 3px;*/
 }
 
 header p img {
@@ -134,7 +152,7 @@ p.js-category {
   border: 1px solid gray;
   border-radius: 6px;
   background-color: #c1e5e5;  /* was #d6ffff */
-  margin-top: 5px;
+  margin-top: 2px;
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -198,14 +216,16 @@ p.js-category {
 }
 
 span.article-source {
-  display: inline;
+  display: inline-block;
   text-align: left;
   color: black;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  /*padding-top: 2px;*/
+  /*padding-bottom: 2px;*/
   padding-left: 5px;
-  margin: 0;
-  font-size: 13px;
+  /*margin: 0;*/
+  /*font-size: 13px;*/
+  margin-top: 15px;
+  vertical-align: top;
 }
 
 p.article-title {
@@ -214,6 +234,7 @@ p.article-title {
   margin: 5px;
   font-size: 16px;
   clear: right;
+  max-width: 650px;
 }
 
 .detail-URLImage {
