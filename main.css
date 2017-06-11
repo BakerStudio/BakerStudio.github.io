@@ -43,7 +43,8 @@ body .footer {
   background: cyan;
 }
 
-@media (max-width: 650px) {
+/* previously 650 */
+@media (max-width: 760px) {
   body .holygrail-body {
     flex-direction: column;
   }

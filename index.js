@@ -9,8 +9,8 @@ var ARTICLE_STATUS_EXPANDED = 1;
 var ARTICLE_STATUS_DELETED = 2;
 var logos = {
       Bloomberg: "logos/Bloomberg.png",
-      'Business Insider': "logos/Business-insider.png",
-      'Business Insider (UK)': "logos/Business-insider.png",
+      'Business Insider': "logos/Business-Insider.png",
+      'Business Insider (UK)': "logos/Business-Insider.png",
       Buzzfeed: "logos/buzzfeed-logo.jpg",
       CNBC: "logos/cnbc_logo.gif",
       'The Wall Street Journal': "logos/WSJ.png",
